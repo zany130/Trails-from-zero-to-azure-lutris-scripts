@@ -1,7 +1,7 @@
-name: "The Legend of Heroes: Trails from Azure"
-game_slug: trails-from-azure
+name: "The Legend of Heroes: Trails to Azure"
+game_slug: trails-to-azure
 version: GeoFront
-slug: trails-from-azure-installer
+slug: trails-to-azure-installer
 runner: wine
 script:
   files:
