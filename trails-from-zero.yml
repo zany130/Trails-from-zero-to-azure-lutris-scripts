@@ -1,0 +1,46 @@
+name: "The Legend of Heroes: Trails from Zero"
+game_slug: trails-from-zero
+version: GeoFront
+slug: trails-from-zero-installer
+runner: wine
+script:
+  files:
+  - geofront: https://p-def4.pcloud.com/cBZ6fn73DZzYPIugZZZ3LcHv7Z2ZZmH0ZkZBAvg47ZMHZOJZBpZzzZdHZ8RZb0ZapZrFZqpZMzZ7HZC7ZnpZYCK9XZLzRWYsFDmjpzA7dcv6D5Gu0TSoRk/Geofront_ZeroLauncher_1.1.1.zip
+  game:
+    arch: win32
+    exe: $GAMEDIR/drive_c/GEOFRONT/Zero/ZeroLauncher32.exe
+    prefix: $GAMEDIR
+  installer:
+  - task:
+      arch: win32
+      description: Creating Wine Prefix
+      name: create_prefix
+      install_gecko: false
+      install_mono: false
+      prefix: $GAMEDIR
+  - task:
+      app: directshow
+      name: winetricks
+      prefix: $GAMEDIR
+  - extract:
+      dst: $GAMEDIR/drive_c/GEOFRONT/Zero
+      file: $geofront
+  - task:
+      name: winekill
+      prefix: $GAMEDIR
+  - task:
+      description: 'Running Geofront installer.
+      When you finish installing the game, close the installer. Do NOT click play.
+      Important Wine overrides are applied after the installer is closed. Clicking play immediately after finishing the install process will launch the game without the Geofront mod, which is bad news.'
+      executable: $GAMEDIR/drive_c/GEOFRONT/Zero/ZeroLauncher32.exe
+      name: wineexec
+      prefix: $GAMEDIR
+  - task:
+      name: winekill
+      prefix: $GAMEDIR
+      
+  wine:
+    dxvk: false
+    version: lutris-5.7-11-x86_64
+    overrides:
+        dinput8: n,b
