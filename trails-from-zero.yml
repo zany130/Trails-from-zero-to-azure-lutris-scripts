@@ -5,7 +5,7 @@ slug: trails-from-zero-installer
 runner: wine
 script:
   files:
-  - geofront: https://p-def4.pcloud.com/cBZ6fn73DZzYPIugZZZ3LcHv7Z2ZZmH0ZkZBAvg47ZMHZOJZBpZzzZdHZ8RZb0ZapZrFZqpZMzZ7HZC7ZnpZYCK9XZLzRWYsFDmjpzA7dcv6D5Gu0TSoRk/Geofront_ZeroLauncher_1.1.1.zip
+  - geofront: N/A:Please Provide Geofront launcher zip
   game:
     arch: win32
     exe: $GAMEDIR/drive_c/GEOFRONT/Zero/ZeroLauncher32.exe
