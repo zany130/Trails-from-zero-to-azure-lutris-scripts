@@ -32,6 +32,7 @@ script:
       description: 'Running Geofront installer.
       When you finish installing the game, close the installer. Do NOT click play.
       Important Wine overrides are applied after the installer is closed. Clicking play immediately after finishing the install process will launch the game without the Geofront mod, which is bad news.'
+      Do not enable anti aliasing as that breaks the load/save menu and options
       executable: $GAMEDIR/drive_c/GEOFRONT/Zero/ZeroLauncher32.exe
       name: wineexec
       prefix: $GAMEDIR
@@ -41,7 +42,6 @@ script:
       
   wine:
     dxvk: false
-    StrictDrawOrdering: enabled
     version: lutris-5.7-11-x86_64
     overrides:
         dinput8: n,b
