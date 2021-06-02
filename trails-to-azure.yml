@@ -5,7 +5,7 @@ slug: trails-to-azure-installer
 runner: wine
 script:
   files:
-  - geofront: N/A: Please Provide Geofront launcher zip
+  - geofront: N/A:Please Provide Geofront launcher zip
   game:
     arch: win32
     exe: $GAMEDIR/drive_c/GEOFRONT/AzureLauncher32.exe
