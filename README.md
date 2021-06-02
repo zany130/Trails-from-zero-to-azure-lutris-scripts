@@ -6,3 +6,5 @@ Do not run the game from the installer as it apply the overides to load the geof
 Also setting anti aliasing to anything higher than 4x casues visual glitch's
 
 zero runs fine  with the defualt lutris wine version, but azure need 6.1-3 get it by clicking on the cog next to runners in lutris and scrolling down to wine and then clicking the first cog to manage versions and select 6.1-3
+
+I disabled DXVK as in zero it would cause screen flickering in battles. I have yet to have this issue in azure but I disabled it anyway the game dosn't seem to run worse because of it, but if you notice any issues try renabling DXVK in the wine runner settings 
