@@ -8,7 +8,7 @@ script:
   - geofront: N/A:Please Provide Geofront launcher zip
   game:
     arch: win32
-    exe: $GAMEDIR/drive_c/GEOFRONT/AzureLauncher32.exe
+    exe: $GAMEDIR/drive_c/FALCOM/ED_AO/ED_AO.exe
     prefix: $GAMEDIR
   installer:
   - task:
