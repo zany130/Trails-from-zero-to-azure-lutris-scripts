@@ -18,10 +18,10 @@ script:
       install_gecko: false
       install_mono: false
       prefix: $GAMEDIR
-  - task:
-      app: directshow
-      name: winetricks
-      prefix: $GAMEDIR
+#  - task:
+#     app: directshow
+#      name: winetricks
+#      prefix: $GAMEDIR
   - extract:
       dst: $GAMEDIR/drive_c/GEOFRONT/
       file: $geofront
@@ -41,6 +41,6 @@ script:
       
   wine:
     dxvk: false
-    version: lutris-5.7-11-x86_64
+    version: lutris-6.1-3-x86_64
     overrides:
         dinput8: n,b
