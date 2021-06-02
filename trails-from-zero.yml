@@ -7,12 +7,12 @@ script:
   files:
   - geofront: N/A:Please Provide Geofront launcher zip
   game:
-    arch: win32
+    arch: win64
     exe: $GAMEDIR/drive_c/FALCOM/ED_ZERO/ED_ZERO.exe
     prefix: $GAMEDIR
   installer:
   - task:
-      arch: win32
+      arch: win64
       description: Creating Wine Prefix
       name: create_prefix
       install_gecko: false
@@ -33,7 +33,7 @@ script:
       When you finish installing the game, close the installer. Do NOT click play.
       Important Wine overrides are applied after the installer is closed. Clicking play immediately after finishing the install process will launch the game without the Geofront mod, which is bad news.'
       Do not enable anti aliasing as that breaks the load/save menu and options
-      executable: $GAMEDIR/drive_c/GEOFRONT/Zero/ZeroLauncher32.exe
+      executable: $GAMEDIR/drive_c/GEOFRONT/Zero/ZeroLauncher.exe
       name: wineexec
       prefix: $GAMEDIR
   - task:
