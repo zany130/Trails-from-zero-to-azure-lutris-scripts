@@ -41,7 +41,7 @@ script:
       
   wine:
     dxvk: false
-    StrictDrawOrdering: True
+    StrictDrawOrdering: Enabled
     version: lutris-5.7-11-x86_64
     overrides:
         dinput8: n,b
