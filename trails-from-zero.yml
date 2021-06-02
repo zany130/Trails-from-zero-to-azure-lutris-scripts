@@ -23,7 +23,7 @@ script:
       name: winetricks
       prefix: $GAMEDIR
   - extract:
-      dst: $GAMEDIR/drive_c/GEOFRONT/Zero
+      dst: $GAMEDIR/drive_c/GEOFRONT/
       file: $geofront
   - task:
       name: winekill
