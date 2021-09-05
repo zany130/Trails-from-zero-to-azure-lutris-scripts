@@ -40,7 +40,5 @@ script:
       prefix: $GAMEDIR
       
   wine:
-    dxvk: false
-    version: lutris-6.1-3-x86_64
     overrides:
         dinput8: n,b
