@@ -1,27 +1,23 @@
 name: "The Legend of Heroes: Trails to Azure"
 game_slug: trails-to-azure
-version: GeoFront
+version: Geofront
 slug: trails-to-azure-installer
 runner: wine
 script:
   files:
   - geofront: N/A:Please Provide Geofront launcher zip
   game:
-    arch: win64
+    arch: win32
     exe: $GAMEDIR/drive_c/FALCOM/ED_AO/ED_AO.exe
     prefix: $GAMEDIR
   installer:
   - task:
-      arch: win64
+      arch: win32
       description: Creating Wine Prefix
       name: create_prefix
       install_gecko: false
       install_mono: false
       prefix: $GAMEDIR
-  - task:
-     app: directshow
-     name: winetricks
-     prefix: $GAMEDIR
   - extract:
       dst: $GAMEDIR/drive_c/GEOFRONT/
       file: $geofront
@@ -32,7 +28,7 @@ script:
       description: 'Running Geofront installer.
       When you finish installing the game, close the installer. Do NOT click play.
       Important Wine overrides are applied after the installer is closed. Clicking play immediately after finishing the install process will launch the game without the Geofront mod, which is bad news.'
-      executable: $GAMEDIR/drive_c/GEOFRONT/AzureLauncher.exe
+      executable: $GAMEDIR/drive_c/GEOFRONT/AzureLauncher32.exe
       name: wineexec
       prefix: $GAMEDIR
   - task:
@@ -40,5 +36,6 @@ script:
       prefix: $GAMEDIR
       
   wine:
+   version: lutris-6.1-3-x86_64
     overrides:
         dinput8: n,b
