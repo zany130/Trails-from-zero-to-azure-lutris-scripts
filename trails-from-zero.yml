@@ -41,6 +41,5 @@ script:
       prefix: $GAMEDIR
       
   wine:
-    dxvk: false
     overrides:
         dinput8: n,b
