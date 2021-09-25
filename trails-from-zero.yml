@@ -18,10 +18,6 @@ script:
       install_gecko: false
       install_mono: false
       prefix: $GAMEDIR
-  - task:
-      app: directshow
-      name: winetricks
-      prefix: $GAMEDIR
   - extract:
       dst: $GAMEDIR/drive_c/GEOFRONT/
       file: $geofront
